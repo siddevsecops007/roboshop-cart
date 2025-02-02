@@ -25,12 +25,12 @@ jobs:
           echo
 
   QA:
-  runs-on: self-hosted
-  needs: DEV
-  steps:
-    - uses: actions/checkout@v4
-    - run: |
-        echo
+    runs-on: self-hosted
+    needs: DEV
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          echo
   UAT:
     runs-on: self-hosted
     needs: QA
