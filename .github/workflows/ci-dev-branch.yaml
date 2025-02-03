@@ -1,0 +1,10 @@
+name: DEV Branch Pipeline
+on:
+  push:
+    branches:
+      - '*'
+      - '!master'
+run-name: ${{ github.sha }} | ${{ github.event.head_commit.message }}
+jobs:
+  call-workflow-passing-data:
+    uses: siddevsecops007/github-reusable-actions/.github/workflows/ci-dev-branch.yaml@main
