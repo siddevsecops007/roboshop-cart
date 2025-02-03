@@ -1,5 +1,6 @@
 name: Cart CI Pipeline
 on: [push]
+run-name: ${{github.sha}}
 jobs:
   build:
     runs-on: self-hosted
